@@ -8,7 +8,9 @@
     "build"
   ],
   "dependencies": {
-    "@design-express/node-scripts": "1.2.5"
+    "@design-express/node-scripts": "1.2.5",
+    "@electric-sql/pglite": "^0.2.13",
+    "drizzle-orm": "^0.33.0"
   },
   "scripts": {
     "start": "node-scripts start",
@@ -31,7 +33,8 @@
     "@design-express/fabrica": "^1.0.1",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
-    "@types/react": "^18.3.5"
+    "@types/react": "^18.3.5",
+    "drizzle-kit": "^0.24.2"
   },
   "browserslist": {
     "production": [

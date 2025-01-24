@@ -25,10 +25,10 @@ export class pgTransaction extends Pure {
     const _sql = this.getInputData(2);
     const _params = this.getInputData(3) ?? [];
     const _data = this.getInputData(4);
-    this.setOutputData(
-      1,
-      await client.query(_sql, _params, _data ? { blob: _data } : undefined)
-    );
-    // await db.
+
+    await client
+      .query(_sql, _params, _data ? { blob: _data } : undefined)
+      .then((result) => this.setOutputData(1, result))
+      .catch((e) => this.setOutputData(1, { error: e }));
   }
 }

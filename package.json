@@ -1,6 +1,6 @@
 {
   "name": "@user/pglite-nodes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "",
   "license": "MIT",
@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "@design-express/node-scripts": "1.2.5",
-    "@electric-sql/pglite": "^0.2.13",
+    "@electric-sql/pglite": "^0.2.16",
+    "@electric-sql/pglite-tools": "^0.2.2",
     "drizzle-orm": "^0.33.0"
   },
   "scripts": {

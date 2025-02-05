@@ -22,4 +22,8 @@ export class pgDatabase extends Pure {
     console.log(this.pg);
     this.setOutputData(1, this.pg);
   }
+  onRemoved() {
+    this.pg?.close();
+    return super.onRemoved();
+  }
 }

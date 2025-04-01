@@ -1,6 +1,6 @@
 {
   "name": "@user/pglite-nodes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "",
   "license": "MIT",
@@ -8,9 +8,9 @@
     "build"
   ],
   "dependencies": {
-    "@design-express/node-scripts": "1.2.5",
-    "@electric-sql/pglite": "^0.2.16",
-    "@electric-sql/pglite-tools": "^0.2.2",
+    "@design-express/node-scripts": "^1.2.8",
+    "@electric-sql/pglite": "^0.2.17",
+    "@electric-sql/pglite-tools": "^0.2.3",
     "drizzle-orm": "^0.33.0"
   },
   "scripts": {
@@ -35,7 +35,8 @@
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "@types/react": "^18.3.5",
-    "drizzle-kit": "^0.24.2"
+    "drizzle-kit": "^0.24.2",
+    "worker-plugin": "^5.0.1"
   },
   "browserslist": {
     "production": [

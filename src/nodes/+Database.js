@@ -10,14 +10,17 @@ export class pgDatabase extends Pure {
   constructor() {
     super();
     this.addInput("path", "string");
-    this.addInput("name", "string");
     this.addOutput("database", "postgres::database");
   }
 
   async onExecute() {
     if (this.pg && !this.pg.closed) await this.pg.close();
-    this.pg = new PGliteWorker(new pgWorker(), { relaxedDurability: false });
-    this.pg.onLeaderChange(() => console.log("AAA"));
+    const _dataDir = (this.getInputData(1) ?? "").trim();
+
+    this.pg = new PGliteWorker(new pgWorker(), {
+      dataDir: _dataDir === "" ? undefined : _dataDir,
+    });
+
     await this.pg.waitReady;
     console.log(this.pg);
     this.setOutputData(1, this.pg);
